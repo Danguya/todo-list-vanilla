@@ -81,5 +81,9 @@ input[type="text"]{
 }
 input[type="checkbox"]:checked ~ h3{
     text-decoration: line-through;
+}
 
+.input-error {
+    border: 1px solid red !important;
+    color: red !important;
 }
