@@ -1,4 +1,5 @@
 var tarefas = []
+var id = 0;
 
 var tasksElem = document.getElementsByClassName("tasks")[0];
 var buttonAdd = document.getElementById("btn-add");
@@ -21,11 +22,13 @@ const addTask = (title) => {
     if(title !== ""){
         tarefas.push(
             {
+                id: id,
                 title: title,
                 status: false
             }
         )
         textInput.classList.remove("input-error");
+        id++;
 
     }else{
         textInput.placeholder = "Informe o titulo da tarefa";
@@ -47,6 +50,6 @@ updateTasks();
 var buttonDelete = Array.from(document.getElementsByClassName("btn-delete"));
 
 const deleteItem = (id) =>{
-    removeTask(1);
+    removeTask(id);
     updateTasks();
 }
