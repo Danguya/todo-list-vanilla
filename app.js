@@ -48,5 +48,6 @@ var buttonDelete = Array.from(document.getElementsByClassName("btn-delete"));
 
 const deleteItem = (id) =>{
     removeTask(1);
+    // updateTasks();
     updateTasks();
 }
